@@ -3,4 +3,4 @@ layout: default
 title: Home
 ---
 
-Is this thing on?
+Welcome to my site. More to come soon.

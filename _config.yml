@@ -7,7 +7,6 @@
 
 # Site settings
 title: Vincent Hounshell
-email: vhounshell@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hounvs.github.io" # the base hostname & protocol for your site
 twitter_username: hounvs
@@ -16,3 +15,11 @@ github_username:  hounvs
 # Build settings
 markdown: kramdown
 exclude: ['.vs']
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

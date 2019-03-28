@@ -1,0 +1,16 @@
+Jekyll
+	Docs
+		https://jekyllrb.com/docs/
+	Commands
+		jekyll serve --verbose
+	Markdown Syntax
+		https://daringfireball.net/projects/markdown/syntax
+Bootstrap
+	https://getbootstrap.com/docs/4.3/getting-started/introduction/
+Github
+	Linking commits to issues
+		https://help.github.com/en/articles/closing-issues-using-keywords
+		This will link and close the issue when merged into default branch (master)
+Misc. Issues
+	HTML being parsed as Markdown
+		https://stackoverflow.com/a/29053505

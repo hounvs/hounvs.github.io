@@ -14,7 +14,7 @@ github_username:  hounvs
 
 # Build settings
 markdown: kramdown
-exclude: ['.vs']
+exclude: ['.vs', 'exclude']
 
 defaults:
   -

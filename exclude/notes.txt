@@ -1,16 +1,28 @@
+Site
+    http://hounvs.github.io
+    http://127.0.0.1:4000/
 Jekyll
-	Docs
-		https://jekyllrb.com/docs/
-	Commands
-		jekyll serve --verbose
-	Markdown Syntax
-		https://daringfireball.net/projects/markdown/syntax
+    Docs
+        https://jekyllrb.com/docs/
+    Commands
+        jekyll serve --verbose
+    Markdown Syntax
+        https://daringfireball.net/projects/markdown/syntax
+Ruby
+    Version 2.4.0 or above
+        ruby -v
+        https://rubyinstaller.org/downloads/
+    Check gems
+        gem server
+        http://localhost:8808/
+    SSL Errors
+        https://stackoverflow.com/a/18130051
 Bootstrap
-	https://getbootstrap.com/docs/4.3/getting-started/introduction/
+    https://getbootstrap.com/docs/4.3/getting-started/introduction/
 Github
-	Linking commits to issues
-		https://help.github.com/en/articles/closing-issues-using-keywords
-		This will link and close the issue when merged into default branch (master)
+    Linking commits to issues
+        https://help.github.com/en/articles/closing-issues-using-keywords
+        This will link and close the issue when merged into default branch (master)
 Misc. Issues
-	HTML being parsed as Markdown
-		https://stackoverflow.com/a/29053505
+    HTML being parsed as Markdown
+        https://stackoverflow.com/a/29053505

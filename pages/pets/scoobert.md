@@ -3,7 +3,7 @@ layout: default
 title: Scoobert
 permalink: /pets/scoobert
 ---
-<img src="/images/pets/Scooby.jpg" alt="Scoobert" height="500"/>
+{% include pet-image.html %}
 
 * Formerly known as Diego
 * Full name is Scoobert Doo

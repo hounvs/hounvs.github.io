@@ -138,11 +138,9 @@ pre {
  */
 .icon > svg {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   vertical-align: middle; }
-  .icon > svg path {
-    fill: #828282; }
 
 /**
  * Site header

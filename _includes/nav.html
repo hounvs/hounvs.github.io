@@ -8,10 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link {% if '/about/' == page.permalink %} active {% endif %}" href="{{ site.baseurl }}/about/">About Me</a>
+                <a class="nav-link {% if page.permalink contains '/about/' %} active {% endif %}" href="{{ site.baseurl }}/about/">About Me</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% if '/pets/' == page.permalink %} active {% endif %}" href="{{ site.baseurl }}/pets/">Pets</a>
+                <a class="nav-link {% if page.permalink contains '/pets/' %} active {% endif %}" href="{{ site.baseurl }}/pets/">Pets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page.permalink contains '/events/' %} active {% endif %}" href="{{ site.baseurl }}/events/">Events</a>
             </li>
         </ul>
     </div>

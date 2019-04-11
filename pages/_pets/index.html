@@ -1,0 +1,17 @@
+---
+layout: default
+title: Pets
+permalink: /pets/index.html
+---
+
+<div>
+    {% for pet in site.pets %}
+        {% if pet.title != 'Pets' %}
+            <h4>
+                <a href="{{ pet.url }}">
+                    {{ pet.title }}
+                </a>
+            </h4>
+        {% endif %}
+    {% endfor %}
+</div>

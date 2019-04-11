@@ -1,0 +1,17 @@
+---
+layout: default
+title: Events
+permalink: /events/index.html
+---
+
+<div>
+    {% for event in site.events %}
+        {% if event.title != 'Events' %}
+            <h4>
+                <a href="{{ event.url }}">
+                    {{ event.title }} - {{ event.date | date: "%a, %b %d, %Y" }}
+                </a>
+            </h4>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Pets
+permalink: /pets/index.html
+---
+
+<div class="card">
+    <ul class="list-group list-group-flush">
+        {% for pet in site.pets %}
+            {% if pet.title != 'Pets' %}
+                <li class="list-group-item">
+                    <a href="{{ pet.url }}">{{ pet.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

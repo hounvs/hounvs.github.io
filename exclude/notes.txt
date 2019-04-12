@@ -4,16 +4,22 @@ Site
 Jekyll
     Docs
         https://jekyllrb.com/docs/
+        https://devhints.io/jekyll
     Commands
-        jekyll serve --verbose
+        `jekyll serve --verbose`
     Markdown Syntax
         https://daringfireball.net/projects/markdown/syntax
+    Liquid
+        https://help.shopify.com/en/themes/liquid/basics
+            https://shopify.github.io/liquid/filters/date/
+            https://shopify.github.io/liquid/filters/sort/
+            https://stackoverflow.com/a/27007324
 Ruby
     Version 2.4.0 or above
-        ruby -v
+        `ruby -v`
         https://rubyinstaller.org/downloads/
     Check gems
-        gem server
+        `gem server`
         http://localhost:8808/
     SSL Errors
         https://stackoverflow.com/a/18130051

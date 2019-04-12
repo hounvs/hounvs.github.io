@@ -9,6 +9,9 @@
 title: Vincent Hounshell
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hounvs.github.io" # the base hostname & protocol for your site
+future: true # Use `published: false` to exclude a page from publishing
+
+# Usernames
 twitter_username: hounvs
 github_username:  hounvs
 youtube_username: hounvs
@@ -18,6 +21,7 @@ twitch_username:  hounvs_Vince
 markdown: kramdown
 exclude: ['.vs', 'exclude']
 
+# Page defaults
 defaults:
   -
     scope:
@@ -25,3 +29,13 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+
+# Collection settings
+collections_dir: pages
+collections:
+    pets:
+        output: true
+        relative_directory: '/pets/'
+    events:
+        output: true
+        relative_directory: '/events/'

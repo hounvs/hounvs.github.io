@@ -15,13 +15,13 @@ date: '2019-08-10'
                     <h6 class="card-subtitle mb-2 text-muted">1600 Monroe Ave NW, Grand Rapids, MI 49505</h6>
                 </div>
                 <div class="col-6">
-                    <a href="https://goo.gl/maps/wSKDX9i1Drx" class="card-link float-right"><img src="/images/icons/map.svg" width="50"/></a>
+                    <a href="https://goo.gl/maps/wSKDX9i1Drx" class="card-link float-right"><img src="/images/icons/map.svg" width="50" /></a>
                 </div>
             </div>
             <a href="https://www.google.com/maps/uv?hl=en&pb=!1s0x8819ac3c181da793%3A0xe25df70a8e7b5666!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115" class="btn btn-primary float-right">See photos</a>
         </div>
     </div>
-    
+
     <h1 class="display-4">Hotels</h1>
     <div class="card-group">
         <div class="card">
@@ -33,7 +33,7 @@ date: '2019-08-10'
                         <h6 class="card-subtitle mb-2 text-muted">11 Monroe Ave NW, Grand Rapids, MI 49503</h6>
                     </div>
                     <div class="col-2">
-                        <a href="https://goo.gl/maps/BXPE3hiKa432" class="card-link float-right"><img src="/images/icons/map.svg"/></a>
+                        <a href="https://goo.gl/maps/BXPE3hiKa432" class="card-link float-right"><img src="/images/icons/map.svg" /></a>
                     </div>
                 </div>
                 <a href="https://book.passkey.com/event/49861541/owner/3416832/landing" class="btn btn-primary float-right">Book reservation!</a>
@@ -48,7 +48,7 @@ date: '2019-08-10'
                         <h6 class="card-subtitle mb-2 text-muted">3333 28th St SE, Grand Rapids, MI 49512</h6>
                     </div>
                     <div class="col-2">
-                        <a href="https://goo.gl/maps/rQb3qdKk4MD2" class="card-link float-right"><img src="/images/icons/map.svg"/></a>
+                        <a href="https://goo.gl/maps/rQb3qdKk4MD2" class="card-link float-right"><img src="/images/icons/map.svg" /></a>
                     </div>
                 </div>
                 <a href="https://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Wright+Hounshell+Wedding%5Egrrde%60WHWWHWA%7CWHWWHWB%60149%60USD%60false%604%608%2F10%2F19%608%2F11%2F19%607%2F5%2F19" class="btn btn-primary float-right">Book reservation!</a>
@@ -59,141 +59,18 @@ date: '2019-08-10'
     <h1 class="display-4">Registry</h1>
     <div class="card-group">
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://smile.amazon.com/wedding/share/hounshell-wright">Amazon</a></h5>
-            </div>
+            <a href="https://smile.amazon.com/wedding/share/hounshell-wright" class="btn-outline-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Amazon</h5>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/545451226" class="btn-outline-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Bed Bath &amp; Beyond</h5>
+                </div>
+            </a>
         </div>
     </div>
 </div>
-
-<style>
-    #progress {
-        width: 100%;
-        background-color: transparent;
-        border-color: #d6d6d6;
-        border-style: dashed;
-        border-width: 2px;
-    }
-    #progressBar {
-        width: 0%;
-        height: 30px;
-        background-color: antiquewhite;
-        margin: 2px;
-        text-align: center;
-        line-height: 30px;
-        color: white;
-    }
-</style>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="inner">
-        <h3>Share With Us</h3>
-        <form id="shareForm" action="#" enctype="multipart/form-data">
-            <div class="field first">
-                <label for="name">Name</label>
-                <input name="name" id="name" type="text" placeholder="Name">
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-            </div>
-            <div class="field">
-                <label for="media">Photo/Video</label>
-                <input type="file" id="media" class="btn" name="media" placeholder="Photo/Video" />
-            </div>
-            <div id="shareContainer">
-                <ul class="actions">
-                    <li><input type="submit" id="shareButton" class="btn" value="Share"/></li>
-                </ul>
-            </div>
-        </form>
-    </div>
-</footer>
-
-<!-- Scripts -->
-<script>
-    // Constants
-    var SERVERROOT = 'https://goinggetter.azurewebsites.net';
-    // On load
-    $(document).ready(function(){
-        // Determine if server is active.
-        $.get( SERVERROOT + '/IsActive', function(data) {
-            if(data != true){
-                setUploadErrorMessage('Media sharing is not currently enabled.');
-            }
-        }).fail(function(){
-            setUploadErrorMessage('Media sharing is not currently enabled.');
-        })
-    });
-    // Upload handler
-    $('#shareForm').submit(function (event) {
-        event.preventDefault();
-        // Only upload if input contains media.
-        if($('#media').val()){
-            console.log('Upload starting...');
-            $.ajax({
-                url: SERVERROOT + '/UploadMedia',
-                type: 'POST',
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: new FormData($('#shareForm')[0]),
-                xhr: function() {
-                    var myXhr = $.ajaxSettings.xhr();
-                    if(myXhr.upload){
-                        myXhr.upload.addEventListener('progress',progress, false);
-                    }
-                    return myXhr;
-                },
-                success: function(response) {
-                    console.log("Upload complete!");
-                },
-                error:  function(xhr, textStatus, errorThrown){
-                    setUploadErrorMessage('An error occurred.  Please try again.');
-                }
-            })
-            // Show upload progress bar
-            toggleProgressDisplay();
-        }
-    });
-    function progress(e){
-        if(e.lengthComputable){
-            var max = e.total;
-            var current = e.loaded;
-            var percentage = ((current * 100)/max);
-            console.log(percentage);
-            $('#progressBar').width(percentage + '%');
-            $('#progressBar').text(Math.round(percentage) + '%');
-            if(percentage >= 100){
-                $('#progressBar').text('Upload Complete.');
-                setTimeout(toggleProgressDisplay, 2000);
-            }
-        }
-    }
-    function toggleProgressDisplay() {
-        var submitHtml = "<ul class=\"actions\">" +
-            "<li><input id=\"shareButton\" value=\"Share\" class=\"button alt\" type=\"submit\"></li>";
-        var progressHtml = "<div id=\"progress\">" +
-            "<div id=\"progressBar\"></div>" +
-            "</div>"
-        if($('#shareButton').length){
-            $('#shareContainer').html(progressHtml);
-        }else{
-            $('#shareContainer').html(submitHtml);
-        }
-    }
-    function setUploadErrorMessage(text){
-        // Ensure that progress section is visible
-        var progressHtml = "<div id=\"progress\">" +
-            "<div id=\"progressBar\"></div>" +
-            "</div>"
-        $('#shareContainer').html(progressHtml);
-        // Set width
-        $('#progressBar').width('100%');
-        // Change color
-        $('#progressBar').css('background-color', 'transparent');
-        // Set text
-        $('#progressBar').text(text);
-    }
-</script>

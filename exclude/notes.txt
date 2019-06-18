@@ -32,3 +32,8 @@ Github
 Misc. Issues
     HTML being parsed as Markdown
         https://stackoverflow.com/a/29053505
+Reaearch
+	Password protected pages
+		https://github.com/matteobrusa/Password-protection-for-static-pages
+		https://github.com/robinmoisson/staticrypt
+		https://github.com/chrisssycollins/protected-github-pages
